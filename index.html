@@ -18,8 +18,8 @@
     <main>
         <nav class="search">
             <form action="#">
-                <input type="text" placeholder="I want to make..." >
-            <button> <span class="fas fa-search"></span></button>
+                <input type="text" placeholder="I want to get..." id="search">
+            <button class="popup" id="popup"> <a class="btn">ORDER</a></button>
             </form>
             <ul>
                 <li> <a href="#" class="btn">Latte</a></li>
@@ -398,6 +398,37 @@ Ad Placement
 <small>&copy; Copyright 2023, Marina M</small>
 </footer>
     </main>
+<div id="popup-form" class="popup-form">
+    <form class="p-form">
+        <label for="coffee-type">Select Coffee Type:</label>
+        <select id="coffee-type" name="coffee-type">
+          <option value="espresso">Espresso</option>
+          <option value="latte">Latte</option>
+          <option value="cappuccino">Cappuccino</option>
+        </select>
+        <br>
+        <label for="size">Select Size:</label>
+        <div><input type="radio" id="size" name="size" value="small"> Small</div>
+        <div><input type="radio" id="size" name="size" value="medium"> Medium</div>
+        <div><input type="radio" id="size" name="size" value="large"> Large</div>
+        <br>
+        <label for="milk-type">Select Milk Type:</label>
+        <select id="milk-type" name="milk-type">
+          <option value="whole">Whole Milk</option>
+          <option value="skim">Skim Milk</option>
+          <option value="soy">Soy Milk</option>
+        </select>
+        <br>
+        <label for="sugar">Add Sugar?</label>
+        <input type="checkbox" id="sugar" name="sugar">
+        <br>
+        <label for="comments">Comments</label>
+        <div><input type="text" id="comments" name="" value=""></div>
 
+        <input type="submit" value="Order" id="order">
+      </form>
+      
+</div>
+<script src="app.js"></script>
 </body>
 </html>
