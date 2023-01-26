@@ -12,7 +12,11 @@
 <div class="wrapper">
 <div class="menu-icon"></div>
 <h1>Your Perfect Coffee</h1>
-<a href="#" class="special-link">Subscribe <span class="fas fa-angle-double-right"></span></a>
+<div class="special-link">
+    <div class="special-date"> </div>
+    <div class="special-time"> </div> 
+</div>
+<div class="special-link1"> </div>
 </div>
     </header>
     <main>
@@ -399,7 +403,7 @@ Ad Placement
 </footer>
     </main>
 <div id="popup-form" class="popup-form">
-    <form class="p-form">
+    <form class="p-form" id="p-form">
         <label for="coffee-type">Select Coffee Type:</label>
         <select id="coffee-type" name="coffee-type">
           <option value="espresso">Espresso</option>
@@ -408,22 +412,31 @@ Ad Placement
         </select>
         <br>
         <label for="size">Select Size:</label>
-        <div><input type="radio" id="size" name="size" value="small"> Small</div>
-        <div><input type="radio" id="size" name="size" value="medium"> Medium</div>
-        <div><input type="radio" id="size" name="size" value="large"> Large</div>
+        <div class="coffee-size">
+        <div><input type="radio" id="size1" name="size" value="small" checked> Small</div>
+        <div><input type="radio" id="size2" name="size" value="medium"> Medium</div>
+        <div><input type="radio" id="size3" name="size" value="large"> Large</div>
+        </div>
         <br>
-        <label for="milk-type">Select Milk Type:</label>
-        <select id="milk-type" name="milk-type">
-          <option value="whole">Whole Milk</option>
+        <div><label for="milk-type">Select Milk Type:</label></div>
+        <select id="milk-type" name="milk-type" >
+          <option value="whole">No Milk</option>
           <option value="skim">Skim Milk</option>
           <option value="soy">Soy Milk</option>
         </select>
         <br>
-        <label for="sugar">Add Sugar?</label>
-        <input type="checkbox" id="sugar" name="sugar">
-        <br>
+        <label for="sugar">Add Sugar?<input type="checkbox" id="sugar" name="sugar"></label>
+        
+       
         <label for="comments">Comments</label>
-        <div><input type="text" id="comments" name="" value=""></div>
+        <div><input type="text" id="comments" name="comments" value=""></div>
+
+      
+        <label for="address">Address</label>
+        <div><input type="text" id="address" name="address" value="" ></div>
+        
+        <label for="phone">Phone</label>
+        <div><input type="text" id="phone" name="phone" value="" ></div>
 
         <input type="submit" value="Order" id="order">
       </form>
